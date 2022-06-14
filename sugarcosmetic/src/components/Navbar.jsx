@@ -11,27 +11,29 @@ const Navbar = () => {
 <img src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif" alt="" />
 
             </div>
-            {/* serch box */}
+//             serch box............ 
             <div className='search'>
+//               here to add live search functionality required..........................
                 <input type="text" />
             </div>
             <div className='btn'>
                 <button>search</button>
             </div>
 
-            {/* login */}
+//             login..................................
             <div className='login'>
 
                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
 </svg></a>
                 <a href="">
-                    
+                    //               here to add login & register functionality required..........................
                     Login/Register</a>
             </div>
 
             <div className='icon'>
                 {/* wish list */}
+// Add wishList here...............................................
                 <a href="">
                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
   <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
@@ -40,6 +42,7 @@ const Navbar = () => {
                 </a>
          
 {/* cart */}
+// Add to cart.......here....................................
 <a href="">
 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
   <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
@@ -48,14 +51,13 @@ const Navbar = () => {
 
 
 {/* discount */}
+
 <a href="">
     <img src="https://in.sugarcosmetics.com/desc-images/discountIcon.svg" alt="" />
 </a>
 
 
-{/* <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-patch-minus-fill" viewBox="0 0 16 16">
-  <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM6 7.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z"/>
-</svg> */}
+
             </div>
         </div>
 
