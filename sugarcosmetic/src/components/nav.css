@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #nav{
     height:100px;
     /* border: 1px solid blue; */
@@ -34,9 +35,47 @@
 .gif{
      width: 15%;
     height: 90%;
+=======
+#nav {
+  height: 100px;
+  /* border: 1px solid blue; */
+  background-color: seashell;
+  display: block;
+ 
+  position: fixed;
+  top: 0;
+  width:100%;
+}
+.mainBox {
+  background-color: beige;
+  /* margin: 5px auto; */
+  margin-left: 5px;
+  height: 60%;
+  width: 99%;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+}
+.gif {
+  display: flex;
+  width: 10%;
+  height: 90%;
+  margin-left: 2%;
+}
+.gif>img {
+  margin-top: 5%;
+  height: 95%;
+  width: 100%;
+}
+.search {
+  display: flex;
+  margin-left:3%;
+  width: 40%;
+  height: 100%;
+>>>>>>> 5491d9116a7f1c7644456b22cd47c6e45aea2cb3
 
 }
-input {
+.inputSearch {
   margin: auto;
   width: 77%;
   height: 60%;
@@ -46,7 +85,7 @@ input {
   background-color: azure;
  
 }
- button {
+ .buttonSearch {
   
   background-color: black;
   width: 20%;
@@ -84,6 +123,7 @@ input {
 }
 .icon>a>img{
   height: 60%;
+  width: 70%;
   text-decoration: none;
 }
 
