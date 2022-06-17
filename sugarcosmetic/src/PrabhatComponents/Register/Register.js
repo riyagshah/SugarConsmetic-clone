@@ -29,111 +29,74 @@ import {
   AlertDescription,
   CloseButton,
 } from "@chakra-ui/react";
-import { toHaveFormValues } from "@testing-library/jest-dom/dist/matchers";
-import React, { useState,useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
 import { BsX, BsPhone } from "react-icons/bs";
 import { FaMobileAlt, FaUser } from "react-icons/fa";
 import "./Register.css";
-export const Register = ({loading,setloading,flow,setflow,user,setuser,active,setActive,HandleClose}) => {
+export const Register = ({
+  loading,
+  setloading,
+  flow,
+  setflow,
+  user,
+  setuser,
+  active,
+  setActive,
+  HandleClose,
+}) => {
+  const [pin, setPin] = useState(false);
+  const [number, setNumber] = useState(false);
+  const [Allo, setAllo] = useState(false);
+  const [otp, setotp] = useState(0);
+  const [sec, setSec] = useState(0);
+  const [minutes, setMinutes] = useState(1);
+  const [roti, setRoti] = useState(0);
+  const [button, setbutton] = useState(false);
+  const [colorScale, setcolorScale] = useState(false);
 
+  var Timer;
+  useEffect(() => {
+    if (roti == 1)
+      Timer = setTimeout(() => {
+        setSec(sec - 1);
+        if (sec == 0) {
+          setMinutes(minutes - 1);
+          setSec(59);
+        }
+        if (sec == 11 && minutes < 1) {
+          setcolorScale(true);
+        }
+        if (minutes == 0 && sec == 0) {
+          setMinutes(0);
+          setSec(0);
+          setRoti(0);
+          setbutton(false);
+          setAllo(false);
+          setcolorScale(false);
 
+          return;
+        }
+      }, 1000);
 
+    return () => clearInterval(Timer);
+  });
 
-  const [pin,setPin]=useState(false)
-  const [number,setNumber]=useState(false)
-  const [Allo,setAllo]=useState(false)
-  const [otp,setotp]=useState(0)
-  const [sec,setSec]=useState(0)
-  const [minutes,setMinutes]=useState(1)
-  const [roti, setRoti] = useState(0)
-  const [button, setbutton] = useState(false)
-  const [colorScale,setcolorScale]=useState(false)
-
-
-
- 
- 
-
-  // const [value,setValue]=useState("")
-
-  // const HandleClose = () => {
-  //   setActive(false);
-  //   if (user == "") {
-  //     setflow(false);
-  //   }
-  // };
-  // const Handlechange=(e)=>{
-  //   console.log("")
-  //   setValue(e.target.value)
-  // }
-  // let body=document.querySelector("body")
-  // const loadi=()=>{
-   
-  // body.classList.add("active")
-  // }
-  
-  
-
-
-
-
-    
-   
-
-
-    // const {
-    //   isOpen: isVisible,
-    //   onClose,
-    //   onOpen,
-    // } = useDisclosure({ defaultIsOpen: true })
-  var Timer
-   useEffect(() => {
-    if(roti==1)
-      Timer=setTimeout(() => {
-      setSec(sec-1)
-      if(sec==0){
-        setMinutes(minutes-1)
-        setSec(59)
-      }
-      if(sec==11&&minutes<1){
-        setcolorScale(true)
-      }
-      if(minutes==0&&sec==0){
-         setMinutes(0)
-        setSec(0)
-        setRoti(0)
-    setbutton(false)
-    setAllo(false)
-    setcolorScale(false)
-   
-        
-        return
-      }
-      
-    }, 1000);
-    
-    return ()=>clearInterval(Timer)
-   })
-   
- 
-  
   return (
-   
     <>
-    <FormControl    zIndex="1000" className={active ? "jaddo active" : "jaddo"}>
+      <FormControl zIndex="1000" className={active ? "jaddo active" : "jaddo"}>
         <Stack
           width="800px"
-          height="1000vh"
+          height="1200px"
           marginLeft="545px"
           bgGradient="linear(to-l, #7928CA, #FF0080)"
-       
         >
           <VStack
             className="Pravobox"
             marginLeft="100px"
             marginTop="100px"
             width="700px"
-            height="700px"
+            height={Allo?"750px":'850px'}
             p="20px 30px"
             bg="white"
           >
@@ -168,29 +131,28 @@ export const Register = ({loading,setloading,flow,setflow,user,setuser,active,se
               </Flex>
             </Stack>
             <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                color="gray.300"
-                fontSize="1.2em"
-                children={FaUser}
-              />
+             <Icon ml="20px" mr="10px" fontSize="20px" textAlign="center" mt="10px" as={FaUser}></Icon>
               <Input
+             
                 placeholder="Enter Username"
+                fontSize="20px"
                 value={user}
-                onChange={(e) =>setuser(e.target.value)}
+                onChange={(e) => setuser(e.target.value)}
               />
-              <InputRightElement />
+         
             </InputGroup>
-            <Stack mt="20px">
+            <Stack mt="30px">
               <Flex>
                 <Text fontSize="25px">+91</Text>
                 <HStack mt="3px" ml="10px">
-                  <PinInput onComplete={()=>setNumber(true)} type="number">
+                  <PinInput onComplete={() => {
+                    
+                     setNumber(true)}} type="number">
                     <PinInputField
                       fontSize="18px"
                       fontWeight="600"
                       border="2px solid black"
-                      outline="none"
+              
                       _focus="disabled"
                     />
                     <PinInputField fontSize="18px" fontWeight="600" />
@@ -204,32 +166,38 @@ export const Register = ({loading,setloading,flow,setflow,user,setuser,active,se
                     <PinInputField fontSize="18px" fontWeight="600" />
                   </PinInput>
                   <Button
-                  disabled={user==""||!number}
-                  onClick={()=>{
-                    let x=Math.floor(10000*Math.random())
-                    let y=1000
-                    if(x<y){
-                      x=x*10
-                    }
-                    else{
-                      x=x
-                    }
-                    setNumber(false)
-                    setAllo(true)
-                    setotp(x)
-                    setRoti(1)
-                    setbutton(true)
-                    setMinutes(1)
-
-                   
-                  
-                  }}
+                    disabled={user == "" || !number}
+                    onClick={() => {
+                      let x = Math.ceil(10000 * Math.random());
+                      let y = 1000;
+                      if (x < y) {
+                        x = x * 10;
+                      } 
+                      else if(x<100){
+                        x=x*100
+                      }
+                      else if(x<10){
+                        x=x*1000
+                      }
+                      
+                      else {
+                        x = x;
+                      }
+                      setNumber(false);
+                      setAllo(true);
+                      setotp(x);
+                      setRoti(1);
+                      setbutton(true);
+                      setMinutes(1);
+                     
+                    }}
                     size="lg"
-                    border="1px solid black"
+                
+                    bg="pink.400"
+                    color="whiteAlpha.800"
                     _hover={{ bg: "black", color: "white" }}
                   >
                     Submit
-                    
                   </Button>
                 </HStack>
               </Flex>
@@ -249,29 +217,28 @@ export const Register = ({loading,setloading,flow,setflow,user,setuser,active,se
             ></Box>
 
             <Flex>
-            
-
-   {Allo?
-    <Alert status='success'>
-      <AlertIcon />
-      <Box>
-        <AlertTitle>Success!</AlertTitle>
-        <AlertDescription>
-          Your otp has been received,It is <p style={{color:"blue",textDecoration:"underline"}}>{otp}</p>.It will valid for Only 1 minute.
-        </AlertDescription>
-      </Box>
-      
-    </Alert>:<Text>Enter Your OtP</Text>
-    }
-  
-
-
-            
+              {Allo ? (
+                <Alert status="success">
+                  <AlertIcon/>
+                  <Box>
+                    <AlertTitle>Success!</AlertTitle>
+                    <AlertDescription>
+                      Your otp has been received,It is{" "}
+                      <p style={{ color: "blue", textDecoration: "underline" }}>
+                        {otp}
+                      </p>
+                      .It will valid for Only 1 minute.
+                    </AlertDescription>
+                  </Box>
+                </Alert>
+              ) : (
+                <Text>Enter Your OtP</Text>
+              )}
             </Flex>
             <Flex>
               <HStack ml="-250px">
-                <PinInput onComplete={()=>setPin(true)} type="otp">
-                  <PinInputField 
+                <PinInput onComplete={() => setPin(true)} type="otp">
+                  <PinInputField
                     fontSize="20px"
                     fontWeight="600"
                     outline="none"
@@ -285,34 +252,47 @@ export const Register = ({loading,setloading,flow,setflow,user,setuser,active,se
             </Flex>
             <Stack alignSelf="flex-start">
               <Button
-              disabled={!pin}
-             
+                disabled={!pin}
                 size="lg"
+                bg="pink.400"
+                color="whiteAlpha.800"
                 _hover={{ bg: "black", color: "white" }}
                 onClick={() => {
                   if (user != "") {
                     setflow(true);
                   }
-                  setActive(false)
-                  setloading(true)
-                 setPin(false)
-                 setAllo(false)
-                 setMinutes(0)
-                 setSec(0)
-                 setRoti(0)
-             setbutton(false)
-             setAllo(false)
-           
-               
+                  setActive(false);
+                  setloading(true);
+                  setPin(false);
+                  setAllo(false);
+                  setMinutes(0);
+                  setSec(0);
+                  setRoti(0);
+                  setbutton(false);
+                  setAllo(false);
                 }}
               >
                 Verify otp
               </Button>
-              {button?<h1 className={colorScale?"scale active":"scale"} style={{marginTop:"10px",textAlign:"center",letterSpacing:"1.4px",fontSize:'16px'}}>{minutes<10?"0"+minutes:minutes}m:{sec<10?"0"+sec:sec}s</h1>:""}
-            
+              {button ? (
+                <h1
+                  className={colorScale ? "scale active" : "scale"}
+                  style={{
+                    marginTop: "10px",
+                    textAlign: "center",
+                    letterSpacing: "1.4px",
+                    fontSize: "16px",
+                  }}
+                >
+                  {minutes < 10 ? "0" + minutes : minutes}m:
+                  {sec < 10 ? "0" + sec : sec}s
+                </h1>
+              ) : (
+                ""
+              )}
             </Stack>
             <Stack spacing={5} direction="row" alignSelf="flex-start">
-              <Checkbox ml="20px" colorScheme='green' defaultChecked>
+              <Checkbox ml="20px" colorScheme="green" defaultChecked>
                 Get Important Updates on Whatsapp
               </Checkbox>
               <Link textDecoration="underline" to="#">
