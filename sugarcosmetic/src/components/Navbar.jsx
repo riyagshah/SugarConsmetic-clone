@@ -16,41 +16,6 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
     <div id='nav'>
  
         <div className='mainBox'>
-<<<<<<< HEAD
-            <div className='gif'/>
-<img src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif" alt="" />
-
-            </div>
-{/* //           serch box............  */}
-            <div className='search'>
-{/* //               here to add live search functionality required.......................... */}
-                <input type="text" />
-            </div>
-            <div className='btn'>
-                <button>search</button>
-            </div>
-     
-   
-            {!flow ? (
-        <Button onClick={()=>hadleclick()}>
-          <Text _hover={{ textDecoration: "underline" }}>Register</Text>/
-          <Text _hover={{ textDecoration: "underline" }}>Login</Text>
-        </Button>
-      ):(
-        <Stack align="center" direction="row">
-          <Icon as={FaUser} />
-          <Select width="200px" onChange={(e)=>{if(e.target.value=="Logout")setflow(false)}}>
-            <option value={user}>Hi {user}</option>
-            <option value="Logout">Logout</option>
-          </Select>
-        </Stack>
-      )
-      }
-  
-               
-                <Link to="">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-=======
             {/* logo gif */}
             <div className='gif'>
 <img src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif" alt="###" />
@@ -77,7 +42,6 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
                 {/* wish list */}
                 <a href="###">
                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
->>>>>>> 28dab6096e72dbd4eb4f08f23586ef54bfb7e615
   <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
 </svg>
   
@@ -91,18 +55,10 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
 </Link>
 
 
-<<<<<<< HEAD
-
-
-<Link to="">
-    <img src="https://in.sugarcosmetics.com/desc-images/discountIcon.svg" alt="" />
-</Link>
-=======
 {/* discount */}
 <a href="###">
     <img src="https://in.sugarcosmetics.com/desc-images/discountIcon.svg" alt="###" />
 </a>
->>>>>>> 28dab6096e72dbd4eb4f08f23586ef54bfb7e615
 
 
 {/* <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-patch-minus-fill" viewBox="0 0 16 16">
@@ -111,11 +67,9 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
             </div>
  
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
             </div>
->>>>>>> master
+
         <div className='hoverBox'>
             {/* <h3>MAKEUP</h3> */}
             
@@ -187,8 +141,8 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
   
         </div>
 
- </>
-=======
+
+
         <div className='lowrBox'>
 {/* filtr */}
 <div className='hoverBox'>
@@ -264,7 +218,7 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
         </div>
 
  </div>
->>>>>>> 28dab6096e72dbd4eb4f08f23586ef54bfb7e615
+
   )
 }
 
