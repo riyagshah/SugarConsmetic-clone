@@ -131,12 +131,13 @@ export const Register = ({flow,setflow,user,setuser,active,setActive,HandleClose
 
     </div>):
     <>
-    <FormControl className={active ? "jaddo active" : "jaddo"}>
+    <FormControl    zIndex="1000" className={active ? "jaddo active" : "jaddo"}>
         <Stack
           width="800px"
           height="1000vh"
           marginLeft="545px"
           bgGradient="linear(to-l, #7928CA, #FF0080)"
+       
         >
           <VStack
             className="Pravobox"
@@ -148,7 +149,7 @@ export const Register = ({flow,setflow,user,setuser,active,setActive,HandleClose
             bg="white"
           >
             <Text
-              color="whiteAlpha.900"
+              color="black"
               position="absolute"
               mt="-6rem"
               ml="-39rem"
@@ -322,7 +323,7 @@ export const Register = ({flow,setflow,user,setuser,active,setActive,HandleClose
             
             </Stack>
             <Stack spacing={5} direction="row" alignSelf="flex-start">
-              <Checkbox ml="20px" defaultChecked>
+              <Checkbox ml="20px" colorScheme='green' defaultChecked>
                 Get Important Updates on Whatsapp
               </Checkbox>
               <Link textDecoration="underline" to="#">
