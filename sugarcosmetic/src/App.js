@@ -5,6 +5,7 @@ import { Register } from './PrabhatComponents/Register/Register';
 import Navbar from "./components/Navbar"
 import Footer from "./components/Fotter"
 import HomePage from "./components/riya/HomePage"
+import './App.css';
 function App() {
   const [flow, setflow] = useState(false);
   const [user, setuser] = useState("");
