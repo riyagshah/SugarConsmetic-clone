@@ -14,7 +14,7 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
     <>
 
     <div id='nav'>
-        <div>
+ 
         <div className='mainBox'>
             <div className='gif'/>
 <img src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif" alt="" />
@@ -28,9 +28,9 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
             <div className='btn'>
                 <button>search</button>
             </div>
-
-
- {!flow ? (
+     
+   
+            {!flow ? (
         <Button onClick={()=>hadleclick()}>
           <Text _hover={{ textDecoration: "underline" }}>Register</Text>/
           <Text _hover={{ textDecoration: "underline" }}>Login</Text>
@@ -45,7 +45,7 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
         </Stack>
       )
       }
-      {active?<Register flow={flow} setflow={setflow} active={active} user={user} setuser={setuser} HandleClose={HandleClose} setActive={setActive}/>:""}
+  
                
                 <Link to="">
                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-suit-heart-fill" viewBox="0 0 16 16">
@@ -73,7 +73,6 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
             </div>
  
 
-            </div>
         <div className='hoverBox'>
             {/* <h3>MAKEUP</h3> */}
             
@@ -142,6 +141,7 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
     </button>
      </div> 
      </div>
+  
         </div>
 
  </>
