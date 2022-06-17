@@ -34,10 +34,10 @@ import React, { useState,useEffect } from "react";
 import { BsX, BsPhone } from "react-icons/bs";
 import { FaMobileAlt, FaUser } from "react-icons/fa";
 import "./Register.css";
-export const Register = ({flow,setflow,user,setuser,active,setActive,HandleClose}) => {
+export const Register = ({loading,setloading,flow,setflow,user,setuser,active,setActive,HandleClose}) => {
 
 
-  const [loading,setloading]=useState(false)
+
 
   const [pin,setPin]=useState(false)
   const [number,setNumber]=useState(false)
@@ -50,6 +50,9 @@ export const Register = ({flow,setflow,user,setuser,active,setActive,HandleClose
   const [colorScale,setcolorScale]=useState(false)
 
 
+
+ 
+ 
 
   // const [value,setValue]=useState("")
 
@@ -74,12 +77,7 @@ export const Register = ({flow,setflow,user,setuser,active,setActive,HandleClose
 
 
 
-    if(loading==true){
-     setTimeout(() => {
-      setloading(false)
-    },1200);
     
-  }
    
 
 
@@ -120,16 +118,7 @@ export const Register = ({flow,setflow,user,setuser,active,setActive,HandleClose
  
   
   return (
-    loading?(<div className="spinner">
-      <Spinner
-  thickness='4px'
-  speed='0.9s'
-  emptyColor='gray.200'
-  color='pink.300'
-  size='xl'
-/>
-
-    </div>):
+   
     <>
     <FormControl    zIndex="1000" className={active ? "jaddo active" : "jaddo"}>
         <Stack
