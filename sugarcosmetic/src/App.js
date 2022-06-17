@@ -33,6 +33,7 @@ function App() {
      <Navbar  user={user} setuser={setuser} active={active} setActive={setActive} flow={flow} setflow={setflow} hadleclick={hadleclick} HandleClose={HandleClose}/>
      {active?<Register flow={flow} setflow={setflow} active={active} user={user} setuser={setuser} HandleClose={HandleClose} setActive={setActive}/>:""}
      <HomePage playMovie={playMovie} stopMovie={stopMovie}/>
+     <Footer/>
    </>
   );
 }

@@ -1,6 +1,8 @@
 
 import React from 'react'
 import './nav.css'
+import { FaUser } from 'react-icons/fa'
+import { Button, Icon, Select, Stack,Text} from '@chakra-ui/react'
 const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setuser }) => {
   return (
     <div id='nav'>

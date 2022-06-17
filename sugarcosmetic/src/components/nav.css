@@ -6,6 +6,7 @@
   position: fixed;
   top: 0;
   width:100%;
+  z-index: 200;
 }
 .mainBox {
   background-color: beige;
@@ -20,12 +21,12 @@
 .gif {
   display: flex;
   width: 10%;
-  height: 90%;
+  height: 87%;
   margin-left: 2%;
 }
 .gif>img {
   margin-top: 5%;
-  height: 95%;
+  height: 98%;
   width: 100%;
 }
 .search {
