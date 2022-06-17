@@ -1,49 +1,8 @@
-
-
-#nav{
-    height:100px;
-    /* border: 1px solid blue; */
-    background-color: rgb(185, 211, 238);
-    display: block;
-    /* overflow: hidden; */
-    position: fixed;
-  /* top: 0; */
-  width: 100%;
-}
-.mainBox{
-    background-color: beige;
-    margin: auto;
-    height: 55%;
-    width: 99.9%;
-    /* border: 1px solid green; */
-    display: flex;
-} 
-.hoverBox{
-    /* border: 1px solid rgb(218, 28, 174); */
-    background-color: aliceblue;
-    display: flex;
-    margin-left: 1%;
-    width: 50%;
-    height: 45%;
-    float: left;
-   justify-content: space-between;
-}
-.mainBox>div{
-    margin-left: .5%;
-    
-    /* border: 1px solid red;  */
-}
-.gif{
-     width: 15%;
-    height: 90%;
-}
-
 #nav {
   height: 100px;
   /* border: 1px solid blue; */
   background-color: seashell;
   display: block;
- 
   position: fixed;
   top: 0;
   width:100%;
@@ -74,8 +33,6 @@
   margin-left:3%;
   width: 40%;
   height: 100%;
-
-
 }
 .inputSearch {
   margin: auto;
@@ -85,10 +42,8 @@
   font-size: 18px;
   padding-left: 14px;
   background-color: azure;
- 
 }
  .buttonSearch {
-  
   background-color: black;
   width: 20%;
   height: 70%;
@@ -98,7 +53,6 @@
   border-radius: 0px 20px 20px 0px;
   margin: auto;
   float: left;
-  
 }
 .login {
    /* border: 1px solid red;  */
@@ -128,7 +82,6 @@
   width: 70%;
   text-decoration: none;
 }
-
 /* ------------------------------------------------- */
 .lowrBox {
   /* background-color: rgb(209, 209, 188); */
@@ -140,17 +93,11 @@
   display: flex;
   /* justify-content: flex-start; */
 }
-
-
 .hoverBox {
- 
   display: flex;
   justify-content: space-between;
- 
   width: 55%;
   height: 70%;
- 
-  
 }
 .dropdown {
   float: left;
@@ -197,6 +144,4 @@
 }
 .dropdown:hover .dropdown-content {
   display: block;
-  
-
 }
