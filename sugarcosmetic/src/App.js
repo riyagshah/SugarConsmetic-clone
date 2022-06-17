@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from 'react';
+import { Login } from './PrabhatComponents/Login/Login';
+import { Register } from './PrabhatComponents/Register/Register';
+import Navbar from "./components/Navbar"
+import Footer from "./components/Fotter"
 
 function App() {
+  const [flow, setflow] = useState(false);
+  const [user, setuser] = useState("");
+    const [active, setActive] = useState(false);
+  const hadleclick = () => {
+    setActive(true);
+  };
+  const HandleClose = () => {
+    setActive(false);
+    if (user == "") {
+      setflow(false);
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <Navbar  user={user} setuser={setuser} active={active} setActive={setActive} flow={flow} setflow={setflow} hadleclick={hadleclick} HandleClose={HandleClose}/>
+
+   </>
   );
 }
 
