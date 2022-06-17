@@ -17,10 +17,10 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
             <button className='buttonSearch'>search</button>
              </div>
             {/* login */}
-            <div className='login'>
+         
                
             {!flow ? (
-        <Button onClick={()=>hadleclick()}>
+        <Button className='login' onClick={()=>hadleclick()}>
           <Text _hover={{ textDecoration: "underline" }}>Register</Text>/
           <Text _hover={{ textDecoration: "underline" }}>Login</Text>
         </Button>
@@ -34,7 +34,7 @@ const Navbar = ({flow,setflow,active,setActive,hadleclick, HandleClose,user,setu
         </Stack>
       )
       }
-            </div>
+      
             <div className='icon'>
                 {/* wish list */}
                 <a href="###">
