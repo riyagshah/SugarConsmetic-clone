@@ -68,13 +68,15 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    border-radius: 20%;
+    /* border-radius: 20%; */
    
 }
 .imagefix{
     height: 301px;
     width: 255px;
     margin: auto;
+    /* border: 1px solid red; */
+
 }
 .imagefix1{
     height: 400px;
@@ -92,9 +94,9 @@
     font-size: 15px;
     border-radius: 0% !important;
 }
-.ptagfix{
+/* .ptagfix{
     margin-top: -10px;
-}
+} */
 .referimg{
     height: 335px;
     width: 1423px;

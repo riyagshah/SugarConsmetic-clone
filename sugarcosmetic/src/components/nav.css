@@ -146,3 +146,15 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.cart{
+  cursor: pointer;   
+ }
+ .cart span:nth-child(2){
+   background-color: red;
+   color: white;
+   padding: 0.3px;
+   font-weight: bold;
+   border-radius: 5px;
+   position: relative;
+   top: -15px;
+ }
