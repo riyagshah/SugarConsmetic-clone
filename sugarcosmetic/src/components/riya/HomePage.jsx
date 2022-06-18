@@ -8,7 +8,9 @@ import Carousel from 'react-grid-carousel'
 // import { Slider3 } from "./Slider3"
 import "./Homepage.css"
 import styled from "styled-components"
-const HomePage = ({playMovie,stopMovie}) => {
+import list from "../../data"
+const HomePage = ({playMovie,stopMovie, handleClick}) => {
+  
    const StyleRegisterContainer=styled.div`
      @media (min-width:375px) and (max-width:667px)
     { 
@@ -102,78 +104,36 @@ const HomePage = ({playMovie,stopMovie}) => {
      <div ><h1 className="h1-tag-div quick" >AIR KISS POWDER LIPSTICK</h1></div>
     
      <iframe  className="youtubefix"  src="https://www.youtube.com/embed/_TTJmiTiiOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+
+     <div class="fourth_box">
+           <h2 className="quick">BESTSELLERS</h2>
+
      <div className="fourth_box">
             <h2 className="quick">BESTSELLERS</h2>
+
            <div className="boxbest">
            <Carousel cols={4} rows={1} gap={5} loop
             >
-      <Carousel.Item>
-      <div className="flexit">
-      <img className="imagefix"width="60%" src="https://cdn.shopify.com/s/files/1/0906/2558/products/AirKissPowderPoweredByImagesArtboard1.jpg?v=1644813116" alt="abc.png" />
-      <h4>SET THE TINTED TONE POWDER</h4>
-      <p className="ptagfix">₹ 499.00</p>
-        <button className="btnfix">SELECT SHADE</button>
-      </div>
-      </Carousel.Item>
-      <Carousel.Item>
-      <div className="flexit">
-        <img className="imagefix" width="60%" src="https://cdn.shopify.com/s/files/1/0906/2558/products/1_c30a9b16-ef13-44c3-af41-04b227c62419.jpg?v=1642434141" alt="abc.png" />
-        <h4>LIP ZIP MATTE TONER</h4>
-      <p className="ptagfix">₹ 399.00</p>
-        <button className="btnfix">SELECT SHADE</button>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-      <div className="flexit">
-        <img className="imagefix" width="60%" src="https://cdn.shopify.com/s/files/1/0906/2558/products/382512089-mettle-priming-balm-01.jpg?v=1648654861" alt="abc.png"/>
-        <h4>MATTE PRIMBLING BAR</h4>
-      <p className="ptagfix">₹ 299.00</p>
-        <button className="btnfix">SELECT SHADE</button>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-      <div className="flexit">
-        <img className="imagefix" width="60%" src="https://cdn.shopify.com/s/files/1/0906/2558/products/1_61109b87-1ae6-4cb4-8550-5b57d688a4eb.jpg?v=1651852771" alt="abc.png"/>
-      <h4>BLING ILLUMINATING SUNSCREEN</h4>
-      <p className="ptagfix">₹ 599</p>
-
-
-        <button className="btnfix">SELECT SHADE</button>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-      <div className="flexit">
-        <img className="imagefix" width="60%" src="https://cdn.shopify.com/s/files/1/0906/2558/products/10_399a571c-c091-4d1c-bc17-111b7da9cd4e.jpg?v=1648741253" alt="abc.png"/>
-        <h4>SUNSCREEN PAAF4++</h4>
-      <p className="ptagfix">₹ 799</p>
-        <button className="btnfix">SELECT SHADE</button>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-      <div className="flexit">
-        <img className="imagefix" width="60%" src="https://cdn.shopify.com/s/files/1/0906/2558/products/01.jpg?v=1644399711" alt="abc.png"/>
-        <h4>KOHOL BLACK KAJAL</h4>
-      <p className="ptagfix">₹ 999</p>
-        <button className="btnfix">SELECT SHADE</button>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-      <div className="flexit">
-        <img className="imagefix" width="60%" src="https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-goddess-of-flawless-spf30-bb-cream-07-vanilla-latte-fair-12796432941139.jpg?v=1619114695" alt="abc.png"/>
-        <h4>KOHOL BLACK KAJAL</h4>
-      <p className="ptagfix">₹ 999</p>
-        <button className="btnfix">SELECT SHADE</button>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-      {/* https://cdn.shopify.com/s/files/1/0906/2558/products/01_d6ffec78-c2b6-4466-8672-233fee0285a8.jpg?v=1644394232 */}
-      <div className="flexit">
-      <img className="imagefix" width="60%" src="https://cdn.shopify.com/s/files/1/0906/2558/products/01_d6ffec78-c2b6-4466-8672-233fee0285a8.jpg?v=1644394232" alt="abc.png"/>
-      <h4>SET THE TONE TINTED POWDER</h4>
-      <p className="ptagfix">₹ 199</p>
-        <button className="btnfix">SELECT SHADE</button>
-        </div>
-      </Carousel.Item>
+      
+      {list.map((item) => {
+         return(
+          <Carousel.Item>
+            <div className="flexit" key={item.id}>
+              <img className="imagefix" src={item.img} alt="abc" />
+              <h3>{item.title}</h3>
+              <p className="ptagfix">₹ {item.price}</p>
+              <button className="btnfix" onClick={() => handleClick(item)}>Add to Cart</button>
+            </div>
+          </Carousel.Item>
+              )
+      }
+       
+     
+     
+      )}
+      
+     
+     
       {/* ... */}
     </Carousel>
            </div>
