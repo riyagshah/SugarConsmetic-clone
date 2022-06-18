@@ -5,6 +5,7 @@ import { Register } from './PrabhatComponents/Register/Register';
 import Navbar from "./components/Navbar"
 import Footer from "./components/Fotter"
 import HomePage from "./components/riya/HomePage"
+import SearchResults from './components/Shivam/SearchResults';
 import './App.css';
 import { Spinner } from '@chakra-ui/react';
 function App() {
@@ -12,6 +13,9 @@ function App() {
   const [user, setuser] = useState("");
   const [loading,setloading]=useState(false)
     const [active, setActive] = useState(false);
+    const [showSearchResult, setShowSearchResult] = useState(false);
+    const [searchResult, setSearchResult] = useState([]);
+  
   const hadleclick = () => {
     setActive(true);
   };
@@ -31,13 +35,15 @@ function App() {
     console.log('on');
   }
 
-    if(loading==true){
+    if(loading===true){
       setTimeout(() => {
        
        setloading(false)
      },2000);
      
    }
+
+// console.log("show search res",showSearchResult,searchResult);
 
   return (
     loading?(<div className="spinner">
@@ -54,11 +60,17 @@ z-zIndex="1000"
   </div>):
     <>
       
-     <Navbar  user={user} setuser={setuser} active={active} setActive={setActive} flow={flow} setflow={setflow} hadleclick={hadleclick} HandleClose={HandleClose}/>
+     <Navbar  user={user} setuser={setuser} active={active} setActive={setActive} flow={flow} setflow={setflow} hadleclick={hadleclick} HandleClose={HandleClose}  setShowSearchResult={setShowSearchResult} setSearchResult={setSearchResult} />
        
-     {active?<Register loading={loading} setloading={setloading} flow={flow} setflow={setflow} active={active} user={user} setuser={setuser} HandleClose={HandleClose} setActive={setActive}/>:<HomePage playMovie={playMovie} stopMovie={stopMovie}/>}
-    
+     {
+     active?
+      <Register loading={loading} setloading={setloading} flow={flow} setflow={setflow} active={active} user={user} setuser={setuser} HandleClose={HandleClose} setActive={setActive}/>
+      : (showSearchResult? <SearchResults searchResult={searchResult}/>
+      :<HomePage playMovie={playMovie} stopMovie={stopMovie}/>)
+     }
+  
      <Footer/>
+
    </>
   );
 }
