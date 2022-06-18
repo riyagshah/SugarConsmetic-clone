@@ -102,7 +102,7 @@ const HomePage = ({playMovie,stopMovie}) => {
      <div ><h1 className="h1-tag-div quick" >AIR KISS POWDER LIPSTICK</h1></div>
     
      <iframe  className="youtubefix"  src="https://www.youtube.com/embed/_TTJmiTiiOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
-     <div class="fourth_box">
+     <div className="fourth_box">
             <h2 className="quick">BESTSELLERS</h2>
            <div className="boxbest">
            <Carousel cols={4} rows={1} gap={5} loop
@@ -178,8 +178,6 @@ const HomePage = ({playMovie,stopMovie}) => {
     </Carousel>
            </div>
         </div>
-
-
      <div ><h1 className="h1-tag-div quick marginfix">QUICK BEAUTY TIPS WITH SUGAR</h1></div>
      <Slider2/>
      <div ><h1 className="h1-tag-div quick" >HOT DEALS</h1></div>
@@ -193,7 +191,7 @@ const HomePage = ({playMovie,stopMovie}) => {
      <Slider4/>
 {/* HERE */}
 
-<div class="fourth_box">
+<div className="fourth_box">
             <h2 className="quick">SUGAR STREAMING</h2>
            <div className="boxbest">
 
@@ -352,7 +350,7 @@ const HomePage = ({playMovie,stopMovie}) => {
         </div>
 
      {/* END */}
-     <div class="fourth_box">
+     <div className="fourth_box">
             <h2 className="quick marginfix1">SUPER SAVERS</h2>
            <div className="boxbest">
            <Carousel cols={4} rows={1} gap={5} loop
@@ -435,7 +433,7 @@ const HomePage = ({playMovie,stopMovie}) => {
         <img className="hot-deal-image" src="https://d32baadbbpueqt.cloudfront.net/Homepage/a246bd5c-0383-4f03-905c-d6ab7f3bdb23.jpg" alt="sugar.png"/>
         <img className="hot-deal-image" src="https://d32baadbbpueqt.cloudfront.net/Homepage/2ef5fc68-77d8-4083-9a4d-f37f42e98feb.jpg" alt="sugar.png"/>
      </div>
-     <div class="fourth_box">
+     <div className="fourth_box">
             <h2 className="quick">GIFTING</h2>
            <div className="boxbest">
            <Carousel cols={4} rows={1} gap={5} loop
@@ -521,7 +519,7 @@ const HomePage = ({playMovie,stopMovie}) => {
         <img className="this-that-image" src="https://d32baadbbpueqt.cloudfront.net/38a305ba-a808-4ade-ba72-fc55f5bc6183.jpg" alt="sugar.png"/>
         
      </div>
-     <div class="fourth_box">
+     <div className="fourth_box">
             <h2 className="quick">JUST IN</h2>
            <div className="boxbest">
            <Carousel cols={4} rows={1} gap={5} loop
@@ -595,7 +593,7 @@ const HomePage = ({playMovie,stopMovie}) => {
         <img className="hot-deal-image" src="https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/6095fb33-4d09-4a55-8ceb-395a0818420c.jpg" alt="sugar.png"/>
      </div>
      
-     <div class="fourth_box">
+     <div className="fourth_box">
             <h2 className="quick">SKINCARE BASIC</h2>
            <div className="boxbest">
            <Carousel cols={4} rows={1} gap={5} loop
