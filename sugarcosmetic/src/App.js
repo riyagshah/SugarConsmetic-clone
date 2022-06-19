@@ -21,7 +21,7 @@ function App() {
   };
   const HandleClose = () => {
     setActive(false);
-    if (user == "") {
+    if (user === "") {
       setflow(false);
     }
   };
