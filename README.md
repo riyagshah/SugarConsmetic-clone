@@ -2,17 +2,17 @@ https://sugarcosme.netlify.app/
 Collaborative Project At Masai School “SUGAR Cosmetics-Clone”.
 
 
-1.Riya Girish Shah
+ 1.Riya Girish Shah
 
-2. Kiran Digambar Kamble
+ 2.Kiran Digambar Kamble
 
-3. Shivam Sunil Rathod
+ 3.Shivam Sunil Rathod
 
-4. Prabhat Singh
+ 4.Prabhat Singh
 
-5.Prabhat Bhardwaj
+ 5.Prabhat Bhardwaj
 
-6.Sharang Ahirekar
+ 6.Sharang Ahirekar
 
 Our Team was given the Project creating a pixel perfect clone of SUGAR Cosmetics and we were given a week’s time to complete the project. We were excited and a bit nervous at the same time as we had to complete everything within a given time frame. Being patient and focused helped us a lot to figure out what to do and how exactly to apply all the learnings that we did in this unit. By Planning and dividing the work efficiently we started our work.
 
